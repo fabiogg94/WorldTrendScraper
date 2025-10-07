@@ -1,0 +1,18 @@
+feat: Add multi-source RSS support and project documentation
+
+This commit introduces several major enhancements to the project, improving its architecture, functionality, and community-readiness.
+
+- Refactor BBC Scraper for Multi-Source RSS:
+  - The BBC scraper is refactored into a generic `fetch_rss_trends` function that accepts a URL and filename.
+  - `config.py` is updated to define multiple BBC feeds (Chinese, Japanese, World News, Entertainment) as individual data sources, leveraging the new generic RSS scraper. This makes the architecture more modular and scalable.
+
+- Add Project Documentation & Licensing:
+  - Adds a `LICENSE` file (MIT License).
+  - Adds a `CONTRIBUTING.md` to guide future contributors.
+  - Implements bilingual `README.md` (English) and `README.zh-TW.md` (Traditional Chinese) with links for easy navigation.
+
+- Fix Pagination Bug:
+  - The pagination control in `index.html` is fixed. Changing the "items per page" selector now preserves the current page for each category, preventing the view from resetting.
+
+- Update `.gitignore`:
+  - The `GEMINI.md` log file is now ignored by Git.
