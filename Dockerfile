@@ -21,9 +21,13 @@ RUN uv pip install . --system
 # --with-deps 會一併安裝作業系統所需的依賴
 RUN python -m playwright install --with-deps
 
-# 7. 複製所有剩餘的應用程式碼
+# 7. 執行爬蟲以產生資料 (這是關鍵修復)
+# 這會執行 main.py 來抓取所有資料並存成 .json
+RUN uv run -m main
+
+# 8. 複製所有剩餘的應用程式碼
 COPY . .
 
-# 8. Zeabur 會自動使用 Procfile 中的指令，所以 CMD 不是必須的
+# 9. Zeabur 會自動使用 Procfile 中的指令，所以 CMD 不是必須的
 # 但如果需要，可以取消註解以下這行
 # CMD ["gunicorn", "app:app"]
