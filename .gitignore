@@ -9,3 +9,6 @@ __pycache__/
 
 # Project-specific
 google_trends_error.html
+
+# Gemini Mentor Logs
+GEMINI.md

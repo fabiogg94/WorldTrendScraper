@@ -7,51 +7,51 @@ from typing import List
 from .schema import TrendItem
 from .utils import save_trends_data
 
-# BBC 中文 RSS Feed URL
-BBC_RSS_URL = "https://feeds.bbci.co.uk/zhongwen/trad/rss.xml"
-OUTPUT_FILENAME = "bbc-trends.json"
-
-def fetch_bbc_trends():
-    """使用 feedparser 抓取 BBC RSS feed 並轉換為標準格式"""
-    print("🚀 開始抓取 BBC Chinese RSS feed...")
+def fetch_rss_trends(url: str, output_filename: str):
+    """通用 RSS Feed 爬蟲，抓取指定 URL 並儲存至指定檔案"""
+    print(f"🚀 開始抓取 RSS feed: {url}")
+    trends: List[TrendItem] = []
 
     try:
-        feed = feedparser.parse(BBC_RSS_URL)
+        feed = feedparser.parse(url)
 
         if feed.bozo:
-            print(f"⚠️  警告: RSS feed 可能格式不正確。錯誤: {feed.bozo_exception}")
+            raise ValueError(f"RSS feed 格式不正確: {feed.bozo_exception}")
+        
+        if not feed.entries:
+            print(f"⚠️ 警告: RSS feed 中沒有找到任何條目: {url}")
+            save_trends_data(output_filename, trends)
+            return
 
-        print(f"📰 頻道標題: {feed.feed.get('title', 'N/A')}")
+        print(f"📰 頻道: {feed.feed.get('title', 'N/A')} - 找到 {len(feed.entries)} 條新聞")
 
-        trends: List[TrendItem] = []
         for entry in feed.entries:
-            # 從 media_thumbnail 中提取縮圖 URL
+            timestamp = None
+            if hasattr(entry, 'published_parsed') and entry.published_parsed:
+                try:
+                    dt = datetime.fromtimestamp(mktime(entry.published_parsed))
+                    timestamp = dt.isoformat()
+                except (TypeError, ValueError):
+                    print(f"⚠️ 警告: 無法解析時間戳: {entry.published_parsed}")
+                    pass
+
             image_url = None
             if 'media_thumbnail' in entry and entry.media_thumbnail:
                 image_url = entry.media_thumbnail[0].get('url')
 
-            # 將 published_parsed (time.struct_time) 轉換為 ISO 格式字串
-            timestamp = None
-            if hasattr(entry, 'published_parsed') and entry.published_parsed:
-                dt = datetime.fromtimestamp(mktime(entry.published_parsed))
-                timestamp = dt.isoformat()
-
             trend_item: TrendItem = {
-                "title": entry.get('title', 'N/A'),
+                "title": entry.get('title', '無標題'),
                 "url": entry.get('link', ''),
                 "score": None,
                 "image_url": image_url,
-                "timestamp": timestamp or entry.get('published'),
+                "timestamp": timestamp,
             }
             trends.append(trend_item)
 
-        # 使用通用的儲存函式
-        save_trends_data(OUTPUT_FILENAME, trends)
-
     except Exception as e:
-        print(f"❌ 爬取 BBC RSS 時發生錯誤: {e}")
+        print(f"❌ 爬取 RSS ({url}) 時發生嚴重錯誤: {e}")
+        save_trends_data(output_filename, [])
+        raise
 
-    print("\n📊 BBC 抓取完成!")
-
-if __name__ == '__main__':
-    fetch_bbc_trends()
+    save_trends_data(output_filename, trends)
+    print(f"✅ 成功抓取並儲存 {len(trends)} 筆趨勢資料到 {output_filename}。")

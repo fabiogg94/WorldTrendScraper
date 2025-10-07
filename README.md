@@ -1,3 +1,5 @@
+[繁體中文](./README.zh-TW.md)
+
 # Core Scraper & Trend Viewer
 
 ---
