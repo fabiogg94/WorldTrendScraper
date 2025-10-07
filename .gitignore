@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+
+# Project-specific
+google_trends_error.html

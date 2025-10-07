@@ -1,0 +1,101 @@
+'''
+{% extends "layout.html" %}
+
+{# Macro to render pagination controls #}
+{% macro render_pagination(pagination, slug, args) %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {# Previous Page #}
+            <li class="page-item {% if not pagination.has_prev %}disabled{% endif %}">
+                <a class="page-link" href="?{{ args_to_url(args, slug + '_page', pagination.page - 1) }}">上一頁</a>
+            </li>
+
+            {# Page Numbers #}
+            {% for page in pagination.iter_pages() %}
+                {% if page %}
+                    <li class="page-item {% if page == pagination.page %}active{% endif %}">
+                        <a class="page-link" href="?{{ args_to_url(args, slug + '_page', page) }}">{{ page }}</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                {% endif %}
+            {% endfor %}
+
+            {# Next Page #}
+            <li class="page-item {% if not pagination.has_next %}disabled{% endif %}">
+                <a class="page-link" href="?{{ args_to_url(args, slug + '_page', pagination.page + 1) }}">下一頁</a>
+            </li>
+        </ul>
+    </nav>
+{% endmacro %}
+
+{# Helper to build URL arguments #}
+{% macro args_to_url(args, key, value) -%}
+    {# Convert MultiDict to a mutable dict first #}
+    {% set new_args = args.to_dict(flat=True) %}
+    {# Update the value for the given key #}
+    {% set _ = new_args.update({key: value}) %}
+    {{ new_args | urlencode }}
+{%- endmacro %}
+
+
+{% block content %}
+<div class="container-fluid">
+    
+    {# Items per page selector #}
+    <div class="d-flex justify-content-end mb-3">
+        <form method="get" class="d-flex align-items-center">
+            <label for="per_page_select" class="form-label me-2 mb-0">每頁顯示:</label>
+            <select class="form-select form-select-sm" id="per_page_select" name="per_page" onchange="this.form.submit()" style="width: auto;">
+                {% for option in per_page_options %}
+                    <option value="{{ option }}" {% if option == current_per_page %}selected{% endif %}>{{ option }}</option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+
+    {% for source in sorted_data %}
+        <div class="mb-5" id="source-{{ source.slug }}">
+            <h2 class="border-bottom pb-2 mb-3">{{ source.name }} <small class="text-muted fs-6">- 更新於: {{ source.updated | replace("T", " ") | truncate(19, True, '') }}</small></h2>
+            
+            <div class="row g-4">
+                {# Universal Trend Card - Renders any TrendItem #}
+                {% for item in source.pagination.items %}
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="{{ item.url }}" target="_blank" class="card-link h-100 text-decoration-none text-dark">
+                            <div class="card h-100 shadow-sm">
+                                {% if item.image_url %}
+                                    <img src="{{ item.image_url }}" class="card-img-top" alt="{{ item.title }}" style="object-fit: cover; height: 200px;">
+                                {% endif %}
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title mb-2">{{ item.title }}</h5>
+                                    
+                                    <div class="mt-auto pt-2">
+                                        {% if item.score %}
+                                            <span class="badge bg-secondary fw-normal">{{ item.score }}</span>
+                                        {% endif %}
+                                        {% if item.timestamp %}
+                                            <small class="text-muted d-block mt-2">{{ item.timestamp | replace("T", " ") | truncate(16, True, '') }}</small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="col-12"><p class="text-center text-muted">沒有資料</p></div>
+                {% endfor %}
+            </div>
+
+            {# Render pagination for the current source #}
+            {% if source.pagination.pages > 1 %}
+                <div class="mt-4">
+                    {{ render_pagination(source.pagination, source.slug, args) }}
+                </div>
+            {% endif %}
+
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+'''
