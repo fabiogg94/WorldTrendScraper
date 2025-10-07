@@ -14,7 +14,7 @@ COPY pyproject.toml uv.lock .python-version* ./
 
 # 5. 安裝依賴
 # 使用 uv sync 來根據 lock 檔案安裝精確版本的依賴
-RUN uv pip install .
+RUN uv pip install . --system
 
 # 6. 安裝 Playwright 瀏覽器核心 (這是關鍵修復)
 # 使用 python -m playwright 來確保指令能被找到
