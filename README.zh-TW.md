@@ -6,7 +6,7 @@
 
 一個基於 Python 的網路應用程式，它從多個線上來源（Google 趨勢、BBC 新聞、Reddit、PTT）抓取熱門話題，並在一個統一、乾淨的網路介面中顯示它們。
 
-![image](https://github.com/LayorX/core-scraper/assets/16933433/2613450a-0b69-409c-a0b9-91722053b83c)
+![image](home_zh.png)
 
 ## ✨ 功能特性
 

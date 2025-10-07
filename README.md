@@ -6,7 +6,7 @@
 
 A Python-based web application that scrapes trending topics from various online sources (Google Trends, BBC News, Reddit, PTT) and displays them in a unified, clean web interface.
 
-![image](https://github.com/LayorX/core-scraper/assets/16933433/2613450a-0b69-409c-a0b9-91722053b83c)
+![image](/home.png)
 
 ## ✨ Features
 
