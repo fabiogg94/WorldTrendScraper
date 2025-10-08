@@ -3,8 +3,6 @@ import json
 from flask import Flask, render_template, request
 from math import ceil
 
-import subprocess
-
 # 從中央設定檔導入所有資料來源設定
 from config import SOURCES
 
@@ -12,33 +10,6 @@ app = Flask(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 DATA_CACHE = {}
-
-def install_playwright_browsers():
-    """在應用程式啟動時，檢查並安裝 Playwright 瀏覽器"""
-    print("🔧 正在檢查 Playwright 瀏覽器...")
-    try:
-        # 使用 subprocess 從程式內部執行指令，更穩健
-        # capture_output=True 可以捕獲輸出，方便偵錯
-        result = subprocess.run(
-            ["uv", "run", "playwright", "install"],
-            capture_output=True,
-            text=True,
-            check=True  # 如果指令失敗 (exit code 非 0)，會引發 CalledProcessError
-        )
-        print("✅ Playwright 瀏覽器已是最新狀態。")
-        print(result.stdout)
-    except FileNotFoundError:
-        print("❌ 錯誤: 'uv' 指令不存在。請確保 uv 已安裝在環境中。")
-        raise
-    except subprocess.CalledProcessError as e:
-        # 如果 playwright install 指令本身出錯
-        print(f"❌ Playwright 瀏覽器安裝失敗，錯誤碼: {e.returncode}")
-        print(f"   stdout: {e.stdout}")
-        print(f"   stderr: {e.stderr}")
-        raise
-    except Exception as e:
-        print(f"❌ 發生未知錯誤: {e}")
-        raise
 
 class Pagination:
     """一個簡單的分頁物件"""
@@ -139,7 +110,7 @@ def index():
     )
 
 # 應用程式啟動時，依序執行準備工作
-install_playwright_browsers()
+
 load_data_into_cache()
 
 if __name__ == '__main__':
