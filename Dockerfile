@@ -22,9 +22,9 @@ COPY . .
 # RUN uv run python main.py
 
 # 8. Expose the port the app runs on
-EXPOSE 8000
+EXPOSE 8080
 
 # 9. Command to run the application
 # On start, first run the scraper to populate the volume, 
 # then start the web server. The worker service will handle subsequent updates.
-CMD ["sh", "-c", "uv run python main.py && uv run gunicorn app:app --bind 0.0.0.0:8000"]
+CMD ["sh", "-c", "uv run python main.py && uv run gunicorn app:app --bind 0.0.0.0:8080"]
