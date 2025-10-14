@@ -9,7 +9,6 @@ from config import SOURCES
 app = Flask(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
-DATA_CACHE = {}
 
 class Pagination:
     """一個簡單的分頁物件"""
@@ -42,22 +41,8 @@ class Pagination:
                 yield num
                 last = num
 
-def load_data_into_cache():
-    """在應用程式啟動時讀取所有 JSON 檔案並存入記憶體快取"""
-    print("🔄 正在載入資料到快取中...")
-    for source in SOURCES:
-        filename = source['filename']
-        try:
-            with open(os.path.join(DATA_DIR, filename), 'r', encoding='utf-8') as f:
-                DATA_CACHE[source['id']] = json.load(f)
-                print(f"  ✅ 已載入: {filename}")
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            DATA_CACHE[source['id']] = None # 即使檔案不存在或損毀也留個紀錄
-            print(f"  ❌ 載入失敗: {filename} ({e})")
-    print("✨ 快取載入完成!")
-
-def paginate_from_cache(raw_data, slug):
-    """從已載入的資料中進行分頁"""
+def get_paginated_data(raw_data, slug):
+    """從原始資料中進行分頁"""
     if not raw_data:
         return None
 
@@ -75,14 +60,22 @@ def paginate_from_cache(raw_data, slug):
     pagination = Pagination(page, per_page, total_count, items_on_page)
     return pagination
 
-
 @app.route('/')
 def index():
-    """主頁，從快取讀取所有資料並渲染模板"""
+    """主頁，在每次請求時讀取所有資料並渲染模板"""
     all_data = []
+    print("🔄 正在為此請求載入資料...")
     for source in SOURCES:
-        raw_data = DATA_CACHE.get(source['id'])
-        pagination = paginate_from_cache(raw_data, source['id'])
+        raw_data = None
+        filename = source['filename']
+        try:
+            with open(os.path.join(DATA_DIR, filename), 'r', encoding='utf-8') as f:
+                raw_data = json.load(f)
+                print(f"  ✅ 已載入: {filename}")
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            print(f"  ❌ 載入失敗: {filename} ({e})")
+
+        pagination = get_paginated_data(raw_data, source['id'])
         
         if raw_data and pagination:
             all_data.append({
@@ -93,6 +86,7 @@ def index():
                 "pagination": pagination
             })
     
+    print("✨ 資料載入完成!")
     # 根據更新時間對來源進行排序，最新的在前
     sorted_data = sorted(all_data, key=lambda item: item['updated'], reverse=True)
     
@@ -109,9 +103,8 @@ def index():
         args=request.args # 用於構建分頁連結
     )
 
-# 應用程式啟動時，依序執行準備工作
-
-load_data_into_cache()
+# No longer load data at startup
+# load_data_into_cache()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
