@@ -1,33 +1,37 @@
-# 1. 基底映像：選擇一個輕量的 Python 映像
-FROM python:3.11-slim
+# 1. Base Image: Use a slim Python image that matches your local environment
+FROM python:3.10-slim
 
-# 2. 設定工作目錄
-WORKDIR /app
+# 2. Environment Variables: For better logging and organization
+ENV PYTHONUNBUFFERED=1
+ENV APP_HOME=/app
+WORKDIR $APP_HOME
 
-# 3. 安裝 uv
-# 我們先安裝 uv，以便後續用它來管理 Python 套件
+# 3. Install uv: The project's package manager
+# We install it system-wide in the image to make it available for the next steps.
 RUN pip install uv
 
-# 4. 複製依賴相關檔案
-# 這樣可以利用 Docker 的層快取機制，如果依賴沒變，就不用重新安裝
-COPY pyproject.toml uv.lock .python-version* ./
+# 4. Copy dependency files first for caching
+COPY pyproject.toml uv.lock ./
 
-# 5. 安裝依賴
-# 使用 uv sync 來根據 lock 檔案安裝精確版本的依賴
-RUN uv pip install . --system
+# 5. Install dependencies using uv
+# This creates a .venv and installs packages from uv.lock.
+# --no-cache is used to ensure we get fresh packages if needed.
+RUN uv sync --no-cache
 
-# 6. 安裝 Playwright 瀏覽器核心 (這是關鍵修復)
-# 使用 python -m playwright 來確保指令能被找到
-# --with-deps 會一併安裝作業系統所需的依賴
-RUN python -m playwright install --with-deps
-
-# 7. 執行爬蟲以產生資料 (這是關鍵修復)
-# 這會執行 main.py 來抓取所有資料並存成 .json
-RUN uv run -m main
-
-# 8. 複製所有剩餘的應用程式碼
+# 6. Copy the rest of the application code
 COPY . .
 
-# 9. Zeabur 會自動使用 Procfile 中的指令，所以 CMD 不是必須的
-# 但如果需要，可以取消註解以下這行
-# CMD ["gunicorn", "app:app"]
+# 7. Initial Data Fetch: Run the scraper script during the build
+# We use 'python main.py' which is more direct and robust than '-m main' inside Docker.
+# The 'uv run' command ensures it executes within the created virtual environment.
+RUN uv run python main.py
+
+# 8. Expose the port the app runs on
+# The Procfile uses gunicorn, which needs a port to listen on.
+# Zeabur will map this to the public port 80/443.
+# We use 8000 as a common default for gunicorn.
+EXPOSE 8000
+
+# 9. Command to run the application
+# This is taken from the Procfile. 'uv run' ensures it uses the venv.
+CMD ["uv", "run", "gunicorn", "app:app", "--bind", "0.0.0.0:8000"]
