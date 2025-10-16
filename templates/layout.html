@@ -13,37 +13,86 @@
         }
         body {
             transition: background-color 0.3s, color 0.3s;
+            padding-top: 56px; /* Navbar height */
         }
+
+        /* Responsive layout adjustments */
+        @media (min-width: 992px) {
+            main {
+                margin-left: var(--sidebar-width);
+            }
+            .sidebar.offcanvas-lg {
+                position: fixed;
+                transform: none;
+                visibility: visible !important;
+                border-right: 1px solid var(--bs-border-color-translucent);
+            }
+            .navbar-brand {
+                padding-left: 1rem;
+            }
+        }
+
         .sidebar {
-            position: fixed;
             top: 0;
-            left: 0;
             bottom: 0;
+            left: 0;
             width: var(--sidebar-width);
-            padding: 56px 0 0; /* 56px is navbar height */
-            box-shadow: 0 0 1rem rgba(0,0,0, .1);
+            padding-top: 56px;
             z-index: 1000;
             overflow-y: auto;
         }
-        main {
-            margin-left: var(--sidebar-width);
-            padding-top: 56px; /* Navbar height */
-        }
+
         .navbar {
             z-index: 1020;
         }
-        .card {
-            transition: transform 0.2s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
+
         .card-link {
             text-decoration: none;
+            color: inherit;
         }
-        .card-title {
-            color: var(--bs-body-color);
+        .trend-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 1px solid var(--bs-border-color-translucent);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .trend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .trend-card .card-img-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background-color: var(--bs-tertiary-bg);
+        }
+        .trend-card .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .trend-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        .trend-card .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+        .trend-card .card-title {
+            flex-grow: 1;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .trend-card .card-footer {
+            background-color: transparent;
+            border-top: 1px solid var(--bs-border-color-translucent);
+            font-size: 0.875rem;
         }
         .back-to-top {
             position: fixed;
@@ -55,31 +104,36 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+    <nav class="navbar bg-body-tertiary border-bottom fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/" style="margin-left: var(--sidebar-width);">📈 趨勢儀表板</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <button class="btn" id="theme-toggler" type="button">
-                            <i class="bi bi-sun-fill"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+
+            <a class="navbar-brand" href="/">📈 趨勢儀表板</a>
+            
+            <ul class="navbar-nav ms-auto flex-row">
+                <li class="nav-item">
+                    <button class="btn" id="theme-toggler" type="button">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <div class="sidebar bg-body-tertiary">
-        <div class="d-flex flex-column p-3">
-            <h5 class="border-bottom pb-2 mb-3">資訊來源</h5>
+    <div class="offcanvas-lg offcanvas-start bg-body-tertiary sidebar" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarOffcanvasLabel">
+                <i class="bi bi-compass-fill me-2"></i>資訊來源
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarOffcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-3 pt-0 pt-lg-3">
             <ul class="nav nav-pills flex-column mb-auto">
                 {% for source in sources %}
                 <li class="nav-item">
-                    <a href="#source-{{ source.slug }}" class="nav-link link-body-emphasis">
+                    <a href="#source-{{ source.slug }}" class="nav-link link-body-emphasis" data-bs-dismiss="offcanvas">
                         <i class="bi {{ source.icon }} me-2"></i>
                         {{ source.name }}
                     </a>
@@ -132,13 +186,45 @@
 
             // Back to Top button
             const backToTopBtn = document.querySelector(".back-to-top");
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 300) {
-                    backToTopBtn.style.display = "block";
-                } else {
-                    backTo.style.display = "none";
-                }
-            });
+            if (backToTopBtn) {
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.style.display = "block";
+                    } else {
+                        backToTopBtn.style.display = "none";
+                    }
+                });
+            }
+
+            // Close offcanvas on link click and scroll smoothly (MANUAL TIMEOUT FIX)
+            const offcanvasElement = document.getElementById('sidebarOffcanvas');
+            if (offcanvasElement) {
+                const sidebarLinks = offcanvasElement.querySelectorAll('.nav-link');
+
+                sidebarLinks.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        // Only act if the offcanvas is currently visible on a smaller screen
+                        if (offcanvasElement.classList.contains('show')) {
+                            event.preventDefault();
+                            const targetId = link.hash;
+                            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+                            
+                            if (offcanvas) {
+                                offcanvas.hide();
+                            }
+
+                            // Wait for the hide animation to finish (Bootstrap's default is .3s)
+                            setTimeout(() => {
+                                const targetElement = document.querySelector(targetId);
+                                if (targetElement) {
+                                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                            }, 350); // 350ms, slightly longer than the animation
+                        }
+                    });
+                });
+            }
+
         })()
     </script>
 </body>

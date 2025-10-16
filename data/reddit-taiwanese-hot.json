@@ -1,6 +1,13 @@
 {
-  "updated": "2025-10-08T03:19:28.961236",
+  "updated": "2025-10-15T09:39:47.409299",
   "trends": [
+    {
+      "title": "這個禮拜有推薦的景點、好吃的餐廳、有趣的事物？",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0zd0o/這個禮拜有推薦的景點好吃的餐廳有趣的事物/",
+      "score": "8",
+      "image_url": "/static/screenshots/8d962f52f68688a46d983ffcdbb4dd37.png",
+      "timestamp": "2025-10-08T11:02:33"
+    },
     {
       "title": "給長期待在台灣海峽戲水區的Dogdog2 : 如何找證據",
       "url": "https://www.reddit.com/r/Taiwanese/comments/1nrw38k/給長期待在台灣海峽戲水區的dogdog2_如何找證據/",
@@ -9,172 +16,165 @@
       "timestamp": "2025-09-27T22:04:55"
     },
     {
-      "title": "Taiwanese版相關事項",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1kbu8qr/taiwanese版相關事項/",
-      "score": "140",
-      "image_url": null,
-      "timestamp": "2025-05-01T07:11:54"
+      "title": "央廣官網遭駭被換上「五星旗」！內部員工落網 竟企圖國慶日再攻擊",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6bfqu/央廣官網遭駭被換上五星旗內部員工落網_竟企圖國慶日再攻擊/",
+      "score": "55",
+      "image_url": "/static/screenshots/4ecc1ea3efa7895dd5fd4b59dca4594e.png",
+      "timestamp": "2025-10-14T18:06:57"
     },
     {
-      "title": "哪裡可以報名假中立組？",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o05c32/哪裡可以報名假中立組/",
-      "score": "92",
-      "image_url": "https://b.thumbs.redditmedia.com/hqDB6ioi_hqMTvkcXiNH4XoCWgGZFErdcZW08NjZ74g.jpg",
-      "timestamp": "2025-10-07T12:37:29"
-    },
-    {
-      "title": "傅崐萁指中央無撤離計畫 卓榮泰嗆：我們搶救生命只有你在搶救政治生命",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0461o/傅崐萁指中央無撤離計畫_卓榮泰嗆我們搶救生命只有你在搶救政治生命/",
-      "score": "72",
-      "image_url": null,
-      "timestamp": "2025-10-07T11:34:36"
-    },
-    {
-      "title": "挖土機業者赴花蓮救災 腳部刺傷染敗血症離世",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o089yt/挖土機業者赴花蓮救災_腳部刺傷染敗血症離世/",
-      "score": "29",
-      "image_url": null,
-      "timestamp": "2025-10-07T15:35:31"
-    },
-    {
-      "title": "海龍蛙兵撤離金馬改駐澎湖　顧立雄曝原因－民視新聞",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0gjwx/海龍蛙兵撤離金馬改駐澎湖_顧立雄曝原因民視新聞/",
-      "score": "6",
-      "image_url": "https://external-preview.redd.it/97loUmd1uZPF7bmgVnatRw9UArEPOJ2lQ-bcy553qIE.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=7777e52b8c52e790aff776c67b49ebcf9cd72ff9",
-      "timestamp": "2025-10-07T22:36:49"
-    },
-    {
-      "title": "台鐵台中五權車站無票男推站員落月台　法院裁定收押",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0dsv6/台鐵台中五權車站無票男推站員落月台_法院裁定收押/",
-      "score": "6",
-      "image_url": null,
-      "timestamp": "2025-10-07T20:47:00"
-    },
-    {
-      "title": "謝三立讓災情得到關注拖鞋阿公點名感謝主播黃家緯喊：原諒我,阿公給你說出來XD｜94要賺錢",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0afzl/謝三立讓災情得到關注拖鞋阿公點名感謝主播黃家緯喊原諒我阿公給你說出來xd94要賺錢/",
-      "score": "10",
-      "image_url": "https://external-preview.redd.it/c-A9mufBQG82mKw-8g4ivNdyZ03lIGay0Z3ROVDTnv4.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=75d03b1af5d73c841df4be4eef156eeccca278e8",
-      "timestamp": "2025-10-07T17:55:58"
-    },
-    {
-      "title": "台灣第一顆自製衛星「福衛八號」　啟運赴加州發射－民視新聞",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0b3ek/台灣第一顆自製衛星福衛八號_啟運赴加州發射民視新聞/",
-      "score": "7",
-      "image_url": "https://external-preview.redd.it/WWdegpLMZTqkhC19TWXYwIPcJbZWKm84xwq7N95HIqY.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=ae0c684e946ac94df37700f2e9ad3ebfe5650236",
-      "timestamp": "2025-10-07T18:34:00"
-    },
-    {
-      "title": "9月平均氣溫28.8度　台北高溫日19天創同期新高",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o0guph/9月平均氣溫288度_台北高溫日19天創同期新高/",
+      "title": "台北車站醉女遭通緝犯公然侵犯　警逮捕送辦",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6wzmb/台北車站醉女遭通緝犯公然侵犯_警逮捕送辦/",
       "score": "3",
-      "image_url": null,
-      "timestamp": "2025-10-07T22:48:07"
+      "image_url": "/static/screenshots/511f09e656ce4e11a80f500320632539.png",
+      "timestamp": "2025-10-15T08:45:53"
     },
     {
-      "title": "黃國昌狗仔斂財／黃國昌假揭弊黑幕臭不可聞 揭謝幸恩偕王鴻薇助理兜售偷拍照斂財 | 鏡週刊",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o036x1/黃國昌狗仔斂財黃國昌假揭弊黑幕臭不可聞_揭謝幸恩偕王鴻薇助理兜售偷拍照斂財_鏡週刊/",
-      "score": "25",
-      "image_url": "https://external-preview.redd.it/KIC1_PYmVumGe9K-ASlyLhEmh50AkdIwCQP5FbwKOr0.jpeg?width=140&amp;height=93&amp;auto=webp&amp;s=0d97121fc838285e207744944ffef59e3fef7ab4",
-      "timestamp": "2025-10-07T10:45:28"
+      "title": "黃國昌狗仔門連環爆！吸收央廣工程師滲系統 喬人事對話竟是駭來賣的",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6bw9c/黃國昌狗仔門連環爆吸收央廣工程師滲系統_喬人事對話竟是駭來賣的/",
+      "score": "33",
+      "image_url": "/static/screenshots/b318c5434c2c6c2b2fe08d0a83de2fa9.png",
+      "timestamp": "2025-10-14T18:33:11"
     },
     {
-      "title": "光復災區一站式平台今開張 災民5分鐘不到辦妥︰準備功夫很好 (自由時報電子報)",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o03bea/光復災區一站式平台今開張_災民5分鐘不到辦妥準備功夫很好_自由時報電子報/",
-      "score": "9",
-      "image_url": "https://external-preview.redd.it/XmXCOwMGWTAqlIv2i_tYDgK7pkR7ckywTMPEu_TtHO0.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=cf431c0141fec72695fbb86930855f937311c218",
-      "timestamp": "2025-10-07T10:51:32"
+      "title": "顏寬恒涉貪二審判8年4月 不服境管8月！抗告駁回確定",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o697oh/顏寬恒涉貪二審判8年4月_不服境管8月抗告駁回確定/",
+      "score": "53",
+      "image_url": "/static/screenshots/cfac3a1e2967eabae529169cffe1bdb7.png",
+      "timestamp": "2025-10-14T15:44:13"
     },
     {
-      "title": "那個上次誰說總統下禮拜恐戒嚴的也辦一辦😡",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzes70/那個上次誰說總統下禮拜恐戒嚴的也辦一辦/",
-      "score": "126",
-      "image_url": "https://b.thumbs.redditmedia.com/hjqBTKZf4LHS0CKgQAAbskOlRpz1WYo7cxQSdEhEV3Y.jpg",
-      "timestamp": "2025-10-06T17:54:31"
+      "title": "採樣出包！中火放流水超標遭罰36萬　中市府敗訴｜華視新聞 20251013 ‪@CtsTw‬",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6gwvo/採樣出包中火放流水超標遭罰36萬_中市府敗訴華視新聞_20251013_ctstw/",
+      "score": "8",
+      "image_url": "https://external-preview.redd.it/MnhzvAK2OdrszJL1Ulu-JXxrvuE7pZXTcgmuC7fgKoQ.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=9f2ddc3cee7c7d0fbbb496fc9ef40a83956f503f",
+      "timestamp": "2025-10-14T22:23:41"
     },
     {
-      "title": "歐盟：聯大2758號決議未提台灣　兩岸應適當溝通減少誤判",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzn5ob/歐盟聯大2758號決議未提台灣_兩岸應適當溝通減少誤判/",
-      "score": "29",
-      "image_url": null,
-      "timestamp": "2025-10-07T00:02:05"
+      "title": "原民部落青年勇敢發聲！對原住民籍立委喊話：心要朝著族人！｜民視新聞｜",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6iaf7/原民部落青年勇敢發聲對原住民籍立委喊話心要朝著族人民視新聞/",
+      "score": "6",
+      "image_url": "https://external-preview.redd.it/oLQEmht9wMW57O5qvrqPWl_L9qNH70gwpCuvwoZbhxA.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=75866b6736fa8a061b4f70514e8c86230882a784",
+      "timestamp": "2025-10-14T23:15:57"
     },
     {
-      "title": "【直播完整版】1007 政院進駐一站式服務助花蓮重建！ 季連成坐鎮協調所說明最新災後復原｜民視快新聞｜",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o02hh6/直播完整版1007_政院進駐一站式服務助花蓮重建_季連成坐鎮協調所說明最新災後復原民視快新聞/",
-      "score": "7",
-      "image_url": "https://external-preview.redd.it/N0p5MKcd1rl1DxB2uFgLN5mU1O7LHEhbnObKOO1Fg_E.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=ee4a299501a664bd9c07008f5e7fc972ed847d41",
-      "timestamp": "2025-10-07T10:11:24"
+      "title": "藍轟鳳山水庫沒做環評設光電板？ 陳其邁：韓國瑜同意的－民視新聞",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o66w9u/藍轟鳳山水庫沒做環評設光電板_陳其邁韓國瑜同意的民視新聞/",
+      "score": "39",
+      "image_url": "https://external-preview.redd.it/Ajfh8TJr46b4iWH05dNyZPX43kWSJWowjo_6oTQRU4Q.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=dc432b798d0d9310e965efa08e6c12a3a5a7f1eb",
+      "timestamp": "2025-10-14T13:18:16"
     },
     {
-      "title": "川普：課徵中型與重型卡車25%關稅 11月1日生效",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o007mq/川普課徵中型與重型卡車25關稅_11月1日生效/",
-      "score": "5",
-      "image_url": null,
-      "timestamp": "2025-10-07T08:26:17"
-    },
-    {
-      "title": "【直播完整版】1007 花蓮洪災中央發放35萬慰助金！政院服務站、逐戶查訪 陳金德：今天確認明天匯款｜民視快新聞｜",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o025hb/直播完整版1007_花蓮洪災中央發放35萬慰助金政院服務站逐戶查訪_陳金德今天確認明天匯款民視快新聞/",
-      "score": "3",
-      "image_url": "https://external-preview.redd.it/4JXlgoXqTrQ5rf9d2YL2T5Ct9iWxSMUG1ZdQDwoXjFI.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=f746055457c67632f6941f5ef787fba94bed7297",
-      "timestamp": "2025-10-07T09:55:48"
-    },
-    {
-      "title": "愛爾達體育家族 (@elta_sports) on Threads - 高雄良緣",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o02q1q/愛爾達體育家族_elta_sports_on_threads_高雄良緣/",
-      "score": "2",
-      "image_url": null,
-      "timestamp": "2025-10-07T10:22:49"
-    },
-    {
-      "title": "館長又有新的點子「斬首打擊」",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzczgp/館長又有新的點子斬首打擊/",
-      "score": "57",
-      "image_url": null,
-      "timestamp": "2025-10-06T15:54:28"
-    },
-    {
-      "title": "災民遞陳情書給徐榛蔚　徐卻甩鍋中央要總統過目－民視新聞",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzfcqt/災民遞陳情書給徐榛蔚_徐卻甩鍋中央要總統過目民視新聞/",
+      "title": "又爆共諜！前長榮航空主管遭中共吸收　國安法起訴｜#鏡新聞",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o67uos/又爆共諜前長榮航空主管遭中共吸收_國安法起訴鏡新聞/",
       "score": "32",
-      "image_url": "https://external-preview.redd.it/M1dM9caVnTcUDS50-FjjPkb-fsUqlzOS5XFOHi71vFk.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=63710bb62aab94265219794bc656885139dfe8ab",
-      "timestamp": "2025-10-06T18:29:11"
+      "image_url": "https://external-preview.redd.it/MQpyg_9jBLtc9QdIXtQ4QHdm7v1pU1sYiXPUXDMaxYQ.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=6119d7340e015144f924787815688ea972990f75",
+      "timestamp": "2025-10-14T14:15:38"
     },
     {
-      "title": "台積電鳳凰城大秀軟實力　無人機升空高掛國旗慶雙十",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzjbzr/台積電鳳凰城大秀軟實力_無人機升空高掛國旗慶雙十/",
-      "score": "18",
-      "image_url": "https://external-preview.redd.it/mZSfLsHU-PKRVBM6YxXShXPzOb0YQrq8xoSy5vPOHLw.jpeg?width=140&amp;height=73&amp;auto=webp&amp;s=f0f2eb812593bc1aab1ddce3e19ba9912234788d",
-      "timestamp": "2025-10-06T21:39:11"
+      "title": "川普揚言停止從中國採購食用油　報復北京停買美黃豆",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6x07a/川普揚言停止從中國採購食用油_報復北京停買美黃豆/",
+      "score": "1",
+      "image_url": "/static/screenshots/8da9d59e8e49135403d71879dbf3b7f5.png",
+      "timestamp": "2025-10-15T08:46:36"
     },
     {
-      "title": "快新聞／台鐵台中五權站「站員遭無票旅客推落軌道」　台鐵證實要提告了－民視新聞",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzjxhj/快新聞台鐵台中五權站站員遭無票旅客推落軌道_台鐵證實要提告了民視新聞/",
-      "score": "15",
-      "image_url": "https://external-preview.redd.it/n2cPjFf42qwj8Ybi0CO39_QkP9lEIa6Qxv1rvYk4-vk.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=b6629e0d839a70eae20d8eeb9a0d436be56cf275",
-      "timestamp": "2025-10-06T22:02:51"
+      "title": "週刊爆立委吸收央廣員工成駭客 李遠：檢調偵辦中",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6bko0/週刊爆立委吸收央廣員工成駭客_李遠檢調偵辦中/",
+      "score": "14",
+      "image_url": "/static/screenshots/da0b796b7d2e2f868a70c273dac0298f.png",
+      "timestamp": "2025-10-14T18:15:04"
     },
     {
-      "title": "花蓮洪災政院發放慰助金35萬元　7日起逐戶查訪直接入帳",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzn6le/花蓮洪災政院發放慰助金35萬元_7日起逐戶查訪直接入帳/",
-      "score": "10",
-      "image_url": null,
-      "timestamp": "2025-10-07T00:03:02"
-    },
-    {
-      "title": "Who Owns Express VPN, Nord, Surfshark? VPN Relationships Explained",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1o06q2r/who_owns_express_vpn_nord_surfshark_vpn/",
-      "score": "0",
-      "image_url": "https://external-preview.redd.it/YhiolQHQKTAgQRQLLH4WYpPwxKCYeu1fy8N5V_qMR_A.png?width=140&amp;height=78&amp;auto=webp&amp;s=9e118b604f0343662b73ab93dc66eb5f3ab6f359",
-      "timestamp": "2025-10-07T13:57:57"
-    },
-    {
-      "title": "馬太鞍溪堤防修復工程達95% 解除紅色警戒有4大要件－民視新聞",
-      "url": "https://www.reddit.com/r/Taiwanese/comments/1nzmnol/馬太鞍溪堤防修復工程達95_解除紅色警戒有4大要件民視新聞/",
+      "title": "高齡換照下修至70歲　主動繳回駕照搭公共運輸最高補助1500元",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6h7j7/高齡換照下修至70歲_主動繳回駕照搭公共運輸最高補助1500元/",
       "score": "5",
-      "image_url": "https://external-preview.redd.it/SIoh7AyLACOhKZ-WyJtjxJ9f73dKLwE4aHz3rMY47BA.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=9c403d5ce2867f2df576b17467dc7d3a7ec4080b",
-      "timestamp": "2025-10-06T23:44:19"
+      "image_url": "/static/screenshots/50d194c9b365dadfc02b428110e2098b.png",
+      "timestamp": "2025-10-14T22:35:05"
+    },
+    {
+      "title": "傷口灑鹽！花蓮光復災後3週才補撤離名冊 恐涉偽造文書",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o62x69/傷口灑鹽花蓮光復災後3週才補撤離名冊_恐涉偽造文書/",
+      "score": "50",
+      "image_url": "https://external-preview.redd.it/EdUplEE5_6O9EXybJ7VxPcheMa3O36mt-R6Yz8wSI4E.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=d31ee50eb5a6740c836f9119228767bb711c2568",
+      "timestamp": "2025-10-14T09:54:47"
+    },
+    {
+      "title": "發燒新聞／才爆出要補簽撤離名冊　花縣府1事再被轟詐騙｜民視新聞｜",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6bwfj/發燒新聞才爆出要補簽撤離名冊_花縣府1事再被轟詐騙民視新聞/",
+      "score": "10",
+      "image_url": "https://external-preview.redd.it/H2Zvcrb3zbhXP95-3i9_NY6EIXMAEIfYRqZZ1Yl9OQ4.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=ac7d06dfca334fe19a840537d689e56099920be3",
+      "timestamp": "2025-10-14T18:33:27"
+    },
+    {
+      "title": "花蓮縣府盼中央擬避難計畫　卓榮泰：依法為地方政府權責",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6a0uz/花蓮縣府盼中央擬避難計畫_卓榮泰依法為地方政府權責/",
+      "score": "13",
+      "image_url": "/static/screenshots/1f9ea4cbbae10238410dcc1b8665a705.png",
+      "timestamp": "2025-10-14T16:37:38"
+    },
+    {
+      "title": "柬埔寨詐騙園區台籍幹部落網　刑事局押解返台偵辦",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6h29r/柬埔寨詐騙園區台籍幹部落網_刑事局押解返台偵辦/",
+      "score": "4",
+      "image_url": "/static/screenshots/4728bfce4b96452dd906a1680ccf2014.png",
+      "timestamp": "2025-10-14T22:29:25"
+    },
+    {
+      "title": "請益/和男友家人出國旅行回來後一直陷在憂鬱的情緒裡，該如何調適？",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o67mkx/請益和男友家人出國旅行回來後一直陷在憂鬱的情緒裡該如何調適/",
+      "score": "16",
+      "image_url": "/static/screenshots/51b5af50d00402a0197732e2783a1ada.png",
+      "timestamp": "2025-10-14T14:01:31"
+    },
+    {
+      "title": "秀對話紀錄自清 黃姓工程師:我是黃國昌的人 央廣內鬼案外案? 週刊爆工程師是\"黃國昌駭客\"｜記者 李仙棋 蘇意凡│｜台灣要聞20251014｜三立iNEWS",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o62qgd/秀對話紀錄自清_黃姓工程師我是黃國昌的人_央廣內鬼案外案_週刊爆工程師是黃國昌駭客記者_李仙棋/",
+      "score": "31",
+      "image_url": "https://external-preview.redd.it/_rzfI3xWF8gKvIVmv77hr4HeVh9qW-OoVFE9RJytQTQ.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=cfec94f0b1d924deb3b95d490c6abd0fd897e990",
+      "timestamp": "2025-10-14T09:46:01"
+    },
+    {
+      "title": "学术帮助",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6pspr/学术帮助/",
+      "score": "0",
+      "image_url": "/static/screenshots/79f20aa098af0d8aa481d18becfc02d5.png",
+      "timestamp": "2025-10-15T03:51:54"
+    },
+    {
+      "title": "憲法法庭當前困境 - 兼談台派自媒體經營 (廖國翔律師)",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o68f3g/憲法法庭當前困境_兼談台派自媒體經營_廖國翔律師/",
+      "score": "7",
+      "image_url": "https://external-preview.redd.it/oOELyJ6OT6qalSnxlTV3kVbsRBq3d8a0CITOReRAv-w.jpeg?width=140&amp;height=140&amp;auto=webp&amp;s=99719fbf6fa0b8e392ec605f8cb39545a1a75810",
+      "timestamp": "2025-10-14T14:51:59"
+    },
+    {
+      "title": "立院朝野黨團達共識　17日三讀攸關普發現金特別預算",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o6a1m2/立院朝野黨團達共識_17日三讀攸關普發現金特別預算/",
+      "score": "4",
+      "image_url": "/static/screenshots/27a6dc27f3c78222a27ff83757b0e7ee.png",
+      "timestamp": "2025-10-14T16:39:03"
+    },
+    {
+      "title": "東京自由行攻略",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o66wcl/東京自由行攻略/",
+      "score": "3",
+      "image_url": "/static/screenshots/de71569eeeabae89616ddbbae63e803a.png",
+      "timestamp": "2025-10-14T13:18:23"
+    },
+    {
+      "title": "批中共介入黨魁選舉！趙少康：國安局現在不查將來影響大選",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o5fg5t/批中共介入黨魁選舉趙少康國安局現在不查將來影響大選/",
+      "score": "98",
+      "image_url": "https://b.thumbs.redditmedia.com/zdKiZQYENyX5y5tNHnT-aM9kH-yH3wwiPszbr9xgvvw.jpg",
+      "timestamp": "2025-10-13T17:52:41"
+    },
+    {
+      "title": "【直播完整版】1014 花蓮災後重建復原案 季連成協調所最新說明｜民視快新聞｜",
+      "url": "https://www.reddit.com/r/Taiwanese/comments/1o638xa/直播完整版1014_花蓮災後重建復原案_季連成協調所最新說明民視快新聞/",
+      "score": "4",
+      "image_url": "https://external-preview.redd.it/lzsgVV-xKBY5ptq6MKOCVaqo6gQmI-IQQXd9ELWVir0.jpeg?width=140&amp;height=105&amp;auto=webp&amp;s=aaff3977c49984da3d0d3ecf351f59f3a9a071bf",
+      "timestamp": "2025-10-14T10:10:26"
     }
   ]
 }

@@ -5,7 +5,7 @@ from time import mktime
 from typing import List
 
 from .schema import TrendItem
-from .utils import save_trends_data
+from .utils import save_trends_data, take_screenshot
 
 def fetch_rss_trends(url: str, output_filename: str):
     """通用 RSS Feed 爬蟲，抓取指定 URL 並儲存至指定檔案"""
@@ -43,9 +43,14 @@ def fetch_rss_trends(url: str, output_filename: str):
                 "title": entry.get('title', '無標題'),
                 "url": entry.get('link', ''),
                 "score": None,
-                "image_url": image_url,
+                "image_url": image_url, # Will be updated below if needed
                 "timestamp": timestamp,
             }
+
+            # If no image was found in the RSS feed, take a screenshot
+            if not trend_item["image_url"]:
+                trend_item["image_url"] = take_screenshot(trend_item["url"])
+            
             trends.append(trend_item)
 
     except Exception as e:

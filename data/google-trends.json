@@ -1,60 +1,179 @@
 {
-  "updated": "2025-10-08T03:19:39.432877",
+  "updated": "2025-10-15T09:39:22.611399",
   "trends": [
     {
-      "title": "崔秀彬",
-      "url": "https://www.google.com/search?q=%E5%B4%94%E7%A7%80%E5%BD%AC",
+      "title": "北車新聞",
+      "url": "https://www.google.com/search?q=%E5%8C%97%E8%BB%8A%E6%96%B0%E8%81%9E",
+      "score": "1,000+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "陳匡怡",
+      "url": "https://www.google.com/search?q=%E9%99%B3%E5%8C%A1%E6%80%A1",
       "score": "500+",
-      "image_url": null,
+      "image_url": "",
       "timestamp": null
     },
     {
-      "title": "tesla",
-      "url": "https://www.google.com/search?q=tesla",
+      "title": "皇家可口",
+      "url": "https://www.google.com/search?q=%E7%9A%87%E5%AE%B6%E5%8F%AF%E5%8F%A3",
       "score": "200+",
-      "image_url": null,
+      "image_url": "",
       "timestamp": null
     },
     {
-      "title": "orcl",
-      "url": "https://www.google.com/search?q=orcl",
+      "title": "竹北幼兒園溺水",
+      "url": "https://www.google.com/search?q=%E7%AB%B9%E5%8C%97%E5%B9%BC%E5%85%92%E5%9C%92%E6%BA%BA%E6%B0%B4",
       "score": "500+",
-      "image_url": null,
+      "image_url": "",
       "timestamp": null
     },
     {
-      "title": "lebron",
-      "url": "https://www.google.com/search?q=lebron",
-      "score": "500+",
-      "image_url": null,
-      "timestamp": null
-    },
-    {
-      "title": "詹姆斯",
-      "url": "https://www.google.com/search?q=%E8%A9%B9%E5%A7%86%E6%96%AF",
+      "title": "30 分鐘前",
+      "url": "https://www.google.com/search?q=30+%E5%88%86%E9%90%98%E5%89%8D",
       "score": "200+",
-      "image_url": null,
+      "image_url": "",
       "timestamp": null
     },
     {
-      "title": "多益",
-      "url": "https://www.google.com/search?q=%E5%A4%9A%E7%9B%8A",
-      "score": "200+",
-      "image_url": null,
-      "timestamp": null
-    },
-    {
-      "title": "美股新聞",
-      "url": "https://www.google.com/search?q=%E7%BE%8E%E8%82%A1%E6%96%B0%E8%81%9E",
-      "score": "200+",
-      "image_url": null,
-      "timestamp": null
-    },
-    {
-      "title": "羅一鈞",
-      "url": "https://www.google.com/search?q=%E7%BE%85%E4%B8%80%E9%88%9E",
+      "title": "釀酒人 對 道奇",
+      "url": "https://www.google.com/search?q=%E9%87%80%E9%85%92%E4%BA%BA+%E5%B0%8D+%E9%81%93%E5%A5%87",
       "score": "100+",
-      "image_url": null,
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "5314",
+      "url": "https://www.google.com/search?q=5314",
+      "score": "200+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "康舒股價",
+      "url": "https://www.google.com/search?q=%E5%BA%B7%E8%88%92%E8%82%A1%E5%83%B9",
+      "score": "200+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "2609",
+      "url": "https://www.google.com/search?q=2609",
+      "score": "200+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "強茂",
+      "url": "https://www.google.com/search?q=%E5%BC%B7%E8%8C%82",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "立法院",
+      "url": "https://www.google.com/search?q=%E7%AB%8B%E6%B3%95%E9%99%A2",
+      "score": "200+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "8047",
+      "url": "https://www.google.com/search?q=8047",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "高力",
+      "url": "https://www.google.com/search?q=%E9%AB%98%E5%8A%9B",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "陽明海運",
+      "url": "https://www.google.com/search?q=%E9%99%BD%E6%98%8E%E6%B5%B7%E9%81%8B",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "bdi指數",
+      "url": "https://www.google.com/search?q=bdi%E6%8C%87%E6%95%B8",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "颱風",
+      "url": "https://www.google.com/search?q=%E9%A2%B1%E9%A2%A8",
+      "score": "1,000+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "tvbs新聞",
+      "url": "https://www.google.com/search?q=tvbs%E6%96%B0%E8%81%9E",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "bồ đào nha đấu với hungary",
+      "url": "https://www.google.com/search?q=b%E1%BB%93+%C4%91%C3%A0o+nha+%C4%91%E1%BA%A5u+v%E1%BB%9Bi+hungary",
+      "score": "200+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "葡萄牙 對 匈牙利",
+      "url": "https://www.google.com/search?q=%E8%91%A1%E8%90%84%E7%89%99+%E5%B0%8D+%E5%8C%88%E7%89%99%E5%88%A9",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "portugal vs hongaria",
+      "url": "https://www.google.com/search?q=portugal+vs+hongaria",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "d’angelo",
+      "url": "https://www.google.com/search?q=d%E2%80%99angelo",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "金宇彬",
+      "url": "https://www.google.com/search?q=%E9%87%91%E5%AE%87%E5%BD%AC",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "宜蘭天氣",
+      "url": "https://www.google.com/search?q=%E5%AE%9C%E8%98%AD%E5%A4%A9%E6%B0%A3",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "全家咖啡",
+      "url": "https://www.google.com/search?q=%E5%85%A8%E5%AE%B6%E5%92%96%E5%95%A1",
+      "score": "100+",
+      "image_url": "",
+      "timestamp": null
+    },
+    {
+      "title": "台彩",
+      "url": "https://www.google.com/search?q=%E5%8F%B0%E5%BD%A9",
+      "score": "100+",
+      "image_url": "",
       "timestamp": null
     }
   ]

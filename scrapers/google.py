@@ -5,7 +5,7 @@ from typing import List
 from urllib.parse import quote_plus
 
 from .schema import TrendItem
-from .utils import save_trends_data
+from .utils import save_trends_data, take_screenshot
 
 # Google Trends URL
 GOOGLE_TRENDS_URL = "https://trends.google.com.tw/trending?geo=TW&hours=4"
@@ -106,9 +106,11 @@ def fetch_google_trends():
                     "title": title,
                     "url": f"https://www.google.com/search?q={quote_plus(title)}",
                     "score": item.get('searchVolume'),
-                    "image_url": None,
+                    "image_url": None, # Will be replaced by a screenshot
                     "timestamp": None,
                 }
+                # Google Trends never provides an image, so we always take a screenshot.
+                trend_item["image_url"] = take_screenshot(trend_item["url"])
                 trends.append(trend_item)
 
             if not trends:

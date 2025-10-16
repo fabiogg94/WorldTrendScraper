@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List
 
 from .schema import TrendItem
-from .utils import save_trends_data
+from .utils import save_trends_data, take_screenshot
 
 # 設定要抓取的 Reddit URL 列表
 REDDIT_URLS = [
@@ -65,9 +65,14 @@ def fetch_reddit_trends():
                     "title": post_data.get('title', 'N/A'),
                     "url": f"{BASE_URL}{post_data.get('permalink', '')}",
                     "score": str(post_data.get('score', 0)),
-                    "image_url": image_url,
+                    "image_url": image_url, # Will be updated below if needed
                     "timestamp": timestamp,
                 }
+
+                # If no image was found, take a screenshot
+                if not trend_item["image_url"]:
+                    trend_item["image_url"] = take_screenshot(trend_item["url"])
+                
                 trends.append(trend_item)
 
             # 使用通用的儲存函式

@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import List
 
 from .schema import TrendItem
-from .utils import save_trends_data
+from .utils import save_trends_data, take_screenshot
 
 # PTT Web URL
 PTT_URL = "https://www.pttweb.cc/hot/all/today"
@@ -76,9 +76,14 @@ def fetch_ptt_trends():
                     "title": title,
                     "url": f"{BASE_URL}{relative_link}",
                     "score": score,
-                    "image_url": image_url,
+                    "image_url": image_url, # Will be updated below if needed
                     "timestamp": timestamp,
                 }
+
+                # If no image was found, take a screenshot
+                if not trend_item["image_url"]:
+                    trend_item["image_url"] = take_screenshot(trend_item["url"])
+
                 trends.append(trend_item)
 
             except Exception as e:
